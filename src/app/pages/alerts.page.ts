@@ -11,8 +11,4 @@ import { CalloutComponent } from '../../components/alert/callout.component';
     directives: [ ROUTER_DIRECTIVES, AlertComponent, CalloutComponent ]
 })
 
-export class AlertsPage {
-
-
-
-};
+export class AlertsPage { };

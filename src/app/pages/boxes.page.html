@@ -1,0 +1,100 @@
+<section class="content-header">
+    <h1>Boxes</h1>
+    <ol class="breadcrumb">
+        <li><a [routerLink]="['']"><i class="fa fa-home"></i> Home</a></li>
+        <li class="active"><i class="fa fa-circle-o"></i> Boxes</li>
+    </ol>
+</section>
+<section class="content">
+    <h2>Normal and solid box</h2>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <box type="info">
+                <div class="headerbox">
+                    <h3 class="box-title">Default Box Example</h3>
+                </div>
+                The body of the box
+                <div class="footerbox">
+                    This is the footer
+                </div>
+            </box>
+            <div [box]="" type="warning" [withFooter]=false [isSolid]=true>
+                <div class="headerbox">
+                    <h3 class="box-title">Input</h3>
+                    <div class="box-tools pull-right">
+                        <div class="has-feedback">
+                            <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                            <input type="text" class="form-control input-sm" placeholder="Search...">
+                        </div>
+                    </div>
+                </div>
+                Solid Box Example without footer
+            </div>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-6 col-lg-6">
+            <div [box]="" type="primary">
+                <div class="headerbox">
+                    <h3 class="box-title">Default Box Example</h3>
+                </div>
+                The body of the box
+                <div class="footerbox">
+                    This is the footer
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-6 col-lg-6">
+            <div [box]="" type="success" [withHeading]=false [isSolid]=true>
+                <div class="headerbox">
+                    <h3 class="box-title"></h3>
+                </div>
+                Solid Box Example without heading: The body of the box
+                <div class="footerbox">
+                    This is the footer
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2>Info box</h2>
+    <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <info-box>
+                Empty box
+            </info-box>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <info-box icon="fa-star-o">
+                Not so empty box
+            </info-box>
+        </div>        
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <info-box icon="fa-star-o" color="red">
+                Not an empty box
+            </info-box>
+        </div>        
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <info-box icon="fa-comments-o" [backgroundColor]="true" color="teal">
+                Not an empty box
+            </info-box>
+        </div>        
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div role="info-box" icon="fa-envelope-o" [backgroundColor]="true" color="olive">
+                Not an empty box
+            </div>
+        </div>        
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div [infobox]="" icon="fa-edit" [backgroundColor]="true" color="orange">
+                Not an empty box
+            </div>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="info-box">
+                <!-- Apply any bg-* class to to the icon to color it -->
+                <span class="info-box-icon bg-red"><i class="fa fa-thumbs-o-down"></i></span>
+                <div class="info-box-content">
+                    <span class="info-box-text">Dislikes</span>
+                    <span class="info-box-number">93,139</span>
+                </div><!-- /.info-box-content -->
+            </div><!-- /.info-box -->
+        </div>
+    </div>
+</section>

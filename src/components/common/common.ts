@@ -1,5 +1,6 @@
 export type ElementType = "default" | "primary" | "success" | "info" | "warning" | "danger" | "link";
 export type ElementSize = "normal" | "large" | "small" | "tiny";
+export type AlertType = "success" | "info" | "warning" | "danger";
 
 export interface ElementTypeToClassMap {
     [elementType: string]: string;
@@ -7,6 +8,10 @@ export interface ElementTypeToClassMap {
 
 export interface ElementSizeToClassMap {
     [elementSize: string]: string;
+}
+
+export interface AlertTypeToClassMap {
+    [alertType: string]: string;
 }
 
 export const BackgroundColors = [

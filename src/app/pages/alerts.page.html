@@ -1,0 +1,45 @@
+<section class="content-header">
+    <h1>Alerts</h1>
+    <ol class="breadcrumb">
+        <li><a [routerLink]="['']"><i class="fa fa-home"></i> Home</a></li>
+        <li class="active"><i class="fa fa-circle-o"></i> Alerts</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <!-----Alerts----->
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <i class="fa fa-warning"></i>
+                    <h3 class="box-title">Alerts</h3>
+                </div>
+                <div class="box-body">
+                    <div role="alert" type="info" [canClose]="false" title="ALARMA" [isOpen]="true" [showIcon]="false" customIcon="">
+                        TEEESTTTTTTT
+                    </div>
+                    <alert type="danger" [canClose]="true" title="ALARMA" [isOpen]="true" [showIcon]="true" customIcon="fa-edit">
+                        TEEESTTTTTTT
+                    </alert>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <!-----Callouts----->
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <i class="fa fa-bullhorn"></i>
+                    <h3 class="box-title">Callouts</h3>
+                </div>
+                <div class="box-body">
+                    <callout [isOpen]="true" title="This is a callout!" type="warning">
+	                    Content
+                    </callout>
+                    <div role="callout" [isOpen]="true" title="This is a callout!" type="success">
+	                    Div role="callout"
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

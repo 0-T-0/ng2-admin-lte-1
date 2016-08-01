@@ -1,3 +1,41 @@
-<h1>
-  {{title}}
-</h1>
+<div class="skin-blue sidebar-mini">
+<div class="wrapper" [style.min-height]="appMinHeight">
+    <header class="main-header" #header>
+        <a class="logo">
+            <span class="logo-mini">ALTE</span>
+            <span class="logo-lg">ng2-admin-lte</span>
+        </a>
+        <nav class="navbar navbar-static-top">
+        </nav>
+    </header>
+
+    <aside class="main-sidebar">
+        <ul class="sidebar-menu">
+            <li class="header">MAIN MENU</li>
+            <li>
+                <a [routerLink]="['']">
+                    <i class="fa fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a [routerLink]="['buttons']">
+                    <i class="fa fa-circle-o"></i>
+                    <span>Buttons</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <div class="content-wrapper" [style.min-height]="contentMinHeight">
+        <router-outlet></router-outlet>
+    </div>
+
+    <footer class="main-footer" #footer>
+        <div class="pull-right hidden-xs">
+            Version 0.0.0-alpha.0
+        </div>
+        <div>Copyright</div>
+    </footer>
+</div>
+</div>

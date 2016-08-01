@@ -266,6 +266,26 @@
                     <h4 class="box-title">Split Buttons</h4>
                 </div>
                 <div class="box-body">
+                    <split-button type="danger" (clicked)="splitClicked('button')" (toggled)="splitToggled('button', $event.isOpen)" (closed)="splitClosed('button')" (opened)="splitOpened('button')">
+                        <span>Action</span>
+                        <li class="dropdown-content"><a href="#">Action #1</a></li>
+                        <li class="divider dropdown-content"></li>
+                        <li class="dropdown-content"><a href="#">Action #2</a></li>
+                    </split-button>
+                    <split-menu type="success" (clicked)="splitClicked('menu')" (toggled)="splitToggled('menu', $event.isOpen)" (closed)="splitClosed('menu')" (opened)="splitOpened('menu')">
+                        <span>Action</span>
+                        <li class="dropdown-content"><a href="#">Action #1</a></li>
+                        <li class="divider dropdown-content"></li>
+                        <li class="dropdown-content"><a href="#">Action #2</a></li>
+                    </split-menu>
+                    <div>
+                        <h5>Split events: <button type="warning" size="tiny" (click)="splitClearEvents()"><i class="fa fa-close"></i></button></h5>
+                        <div style="max-height: 10em; overflow-y: auto">
+                            <ul>
+                                <li *ngFor="let ev of splitEvents">{{ev}}</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

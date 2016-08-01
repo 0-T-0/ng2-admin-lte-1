@@ -15,10 +15,6 @@ import { DropdownComponentBase } from './dropdown.component-base';
         <ng-content select="li"></ng-content>
     </ul>
     `,
-    host: {
-        '[class.open]': 'isOpen',
-        '[class.btn-group]': 'true'
-    },
     directives: [ ButtonComponent ]
 })
 export class DropdownMenuComponent extends DropdownComponentBase {

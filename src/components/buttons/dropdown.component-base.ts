@@ -1,13 +1,17 @@
-import { Input, Output, ElementRef, EventEmitter } from '@angular/core';
+import { Input, Output, ElementRef, EventEmitter, HostBinding } from '@angular/core';
 
 import { ElementType, eventTriggeredInsideElement } from '../common/index';
 
-export class DropdownComponentBase {
+export abstract class DropdownComponentBase {
     @Input()
     public type: ElementType = 'default';
 
     @Input()
+    @HostBinding('class.open')
     public isOpen: boolean = false;
+
+    @HostBinding('class.btn-group')
+    private get btnGroup(): boolean { return true; };
 
     @Output()
     public toggled: EventEmitter<any> = new EventEmitter();

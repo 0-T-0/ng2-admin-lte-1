@@ -1,14 +1,15 @@
 import { Component, ElementRef } from '@angular/core';
 
 import { ButtonComponent } from './button.component';
-import { DropdownComponentBase } from './dropdown.component-base';
+import { SplitComponentBase } from './split.component-base';
 
 @Component({
-    moduleId: module.id,
-    selector: 'dropdown-button',
+    selector: 'split-button',
     template: `
-    <button [type]="type" class="dropdown-toggle" (click)="clicked($event)" (document:click)="clickedOnDocument($event)">
-        <ng-content select=".button-content"></ng-content>
+    <button [type]="type" (click)="buttonClicked()">
+        <ng-content></ng-content>
+    </button>
+    <button [type]="type" class="dropdown-toggle" (click)="toggleClicked()">
         <span class="caret"></span>
     </button>
     <div class="dropdown-menu">
@@ -17,7 +18,8 @@ import { DropdownComponentBase } from './dropdown.component-base';
     `,
     directives: [ ButtonComponent ]
 })
-export class DropdownButtonComponent extends DropdownComponentBase {
+
+export class SplitButtonComponent extends SplitComponentBase {
     constructor(element: ElementRef) {
         super(element);
     }

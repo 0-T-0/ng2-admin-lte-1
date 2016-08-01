@@ -13,6 +13,7 @@ import { BackgroundColors } from '../../components/common/index';
 export class ButtonsPage implements OnInit {
     bgColors: string[] = BackgroundColors;
     dropdownEvents: string[] = [];
+    splitEvents: string[] = [];
 
     constructor() { }
 
@@ -36,5 +37,25 @@ export class ButtonsPage implements OnInit {
     }
     dropdownClearEvents() {
         this.dropdownEvents = [];
+    }
+
+    splitToggled(name: string, isOpen: boolean) {
+        let msg = `${name} toggled to '${isOpen ? 'open' : 'closed'}'`;
+        this.splitEvents.push(msg);
+    }
+    splitClicked(name: string) {
+        let msg = `${name} clicked`;
+        this.splitEvents.push(msg);
+    }
+    splitClosed(name: string) {
+        let msg = `${name} closed`;
+        this.splitEvents.push(msg);
+    }
+    splitOpened(name: string) {
+        let msg = `${name} opened`;
+        this.splitEvents.push(msg);
+    }
+    splitClearEvents() {
+        this.splitEvents = [];
     }
 }

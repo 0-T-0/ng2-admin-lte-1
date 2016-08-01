@@ -1,0 +1,396 @@
+<section class="content-header">
+    <h1>Buttons</h1>
+    <ol class="breadcrumb">
+        <li><a [routerLink]="['']"><i class="fa fa-home"></i> Home</a></li>
+        <li class="active"><i class="fa fa-circle-o"></i> Buttons</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <!--Button Tags-->
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <i class="fa fa-edit"></i>
+                    <h4 class="box-title">Button Tags</h4>
+                    <div class="box-tools pull-right">
+                        <a href="http://getbootstrap.com/css/#buttons-tags" target="_blank">
+                            <span class="label label-info">
+                                Bootstrap example
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="box-body">
+                    <p>
+                        Use mainly the <code><![CDATA[<button>]]></code> element to apply bootstrap styles to it. This will add classes <code>btn</code> and <code>btn-default</code> to the element. 
+                    </p>
+                    <p>
+                        Also any of the following elements will be detected as a bs3 button: elements with <code>button</code> attribute present, anchor elements (<code><![CDATA[<a>]]></code>) with <code>role="button"</code> and <code><![CDATA[<input>]]></code> elements with <code>type</code> being one of <code>button</code>, <code>submit</code> or <code>reset</code>.
+                    </p>
+                    <p>
+                        <button type="button" (click)="clicked($event)">Button</button>
+                        <button type="submit" (click)="clicked($event)">Submit</button>
+                        <button type="reset" (click)="clicked($event)">Reset</button>
+                        <span button (click)="clicked($event)">Span</span>
+                        <a role="button" (click)="clicked($event)">Link</a>
+                        <input type="button" value="Input button" (click)="clicked($event)">
+                        <input type="submit" value="Input submit" (click)="clicked($event)">
+                        <input type="reset" value="Input reset" (click)="clicked($event)">
+                    </p>
+                    <p>
+                        <figure class="highlight">
+<pre>
+<code class="language-html"><![CDATA[<a role="button" (click)="clicked($event)">Link</a>
+<button type="button" (click)="clicked($event)">Button</button>
+<button type="submit" (click)="clicked($event)">Submit</button>
+<button type="reset" (click)="clicked($event)">Reset</button>
+<input type="button" value="Input button" (click)="clicked($event)">
+<input type="submit" value="Input submit" (click)="clicked($event)">
+<input type="reset" value="Input reset" (click)="clicked($event)">
+<span button (click)="clicked($event)">Span</span>]]></code>
+</pre>
+                        </figure>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <!-- Button Types and Sizes -->
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <i class="fa fa-edit"></i>
+                    <h4 class="box-title">Button Types and Sizes</h4>
+                    <div class="box-tools pull-right">
+                        <a href="https://almsaeedstudio.com/themes/AdminLTE/pages/UI/buttons.html" target="_blank">
+                            <span class="label label-info">
+                                AdminLTE example
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="box-body">
+                    <p>
+                        Various types of buttons. Using the base class <code>.btn</code>.
+                    </p>
+                    <table class="table table-bordered text-center">
+                        <tbody>
+                            <tr>
+                                <th>Normal</th>
+                                <th>Large</th>
+                                <th>Smallth>
+                                <th>X-Small</th>
+                                <th>Active</th>
+                                <th>Flat</th>
+                                <th>Disabled</th>
+                            </tr>
+                            <tr>
+                                <td><code>type="default"</code></td>
+                                <td><code>type="large"</code></td>
+                                <td><code>type="small"</code></td>
+                                <td><code>type="tiny"</code></td>
+                                <td><code>isActive="true"</code></td>
+                                <td><code>isFlat="true"</code></td>
+                                <td><code>isDisabled="true"</code></td>
+                            </tr>
+                            <tr *ngFor="let btnType of ['default', 'primary', 'success', 'info', 'danger', 'warning']">
+                                <td>
+                                    <span button [type]="btnType" size="normal" isBlock="true" (click)="clicked($event)">{{ btnType }}</span>
+                                </td>
+                                <td>
+                                    <span button [type]="btnType" size="large" isBlock="true" (click)="clicked($event)">{{ btnType }}</span>
+                                </td>
+                                <td>
+                                    <span button [type]="btnType" size="small" isBlock="true" (click)="clicked($event)">{{ btnType }}</span>
+                                </td>
+                                <td>
+                                    <span button [type]="btnType" size="tiny" isBlock="true" (click)="clicked($event)">{{ btnType }}</span>
+                                </td>
+                                <td>
+                                    <span button [type]="btnType" isActive="true" isBlock="true" (click)="clicked($event)">{{ btnType }}</span>
+                                </td>
+                                <td>
+                                    <span button [type]="btnType" isFlat="true" isBlock="true" (click)="clicked($event)">{{ btnType }}</span>
+                                </td>
+                                <td>
+                                    <span button [type]="btnType" isDisabled="true" isBlock="true" (click)="clicked($event)">{{ btnType }}</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <!--Block Buttons-->
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <i class="fa fa-edit"></i>
+                    <h4 class="box-title">Block Buttons</h4>
+                </div>
+                <div class="box-body">
+                    <button isBlock="true">.btn-block</button>
+                    <button isBlock="true" isFlat="true">.btn-block.btn-flat</button>
+                    <button isBlock="true" size="small">.btn-block.btn-sm</button>
+                </div>
+            </div>
+
+            <!--Horizontal Button Group-->
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <i class="fa fa-edit"></i>
+                    <h4 class="box-title">Horizontal Button Group</h4>
+                </div>
+                <div class="box-body">
+                    <p>
+                        Horizontal button groups are easy to create. Just add your buttons inside <code><![CDATA[<button-group></button-group>]]></code>
+                    </p>
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th>Button</th>
+                                <th>Icons</th>
+                                <th>Flat</th>
+                            </tr>
+                            <tr *ngFor="let btnType of ['default', 'primary', 'success', 'info', 'danger', 'warning']">
+                                <td>
+                                    <button-group>
+                                        <button button [type]="btnType">Lt</button>
+                                        <button button [type]="btnType">Md</button>
+                                        <button button [type]="btnType">Rt</button>
+                                    </button-group>
+                                </td>
+                                <td>
+                                    <button-group>
+                                        <button button [type]="btnType"><i class="fa fa-align-left"></i></button>
+                                        <button button [type]="btnType"><i class="fa fa-align-center"></i></button>
+                                        <button button [type]="btnType"><i class="fa fa-align-right"></i></button>
+                                    </button-group>
+                                </td>
+                                <td>
+                                    <button-group>
+                                        <button button [type]="btnType" isFlat="true"><i class="fa fa-align-left"></i></button>
+                                        <button button [type]="btnType" isFlat="true"><i class="fa fa-align-center"></i></button>
+                                        <button button [type]="btnType" isFlat="true"><i class="fa fa-align-right"></i></button>
+                                    </button-group>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>
+                        Disabled Button Group
+                    </p>
+                    <div>
+                        <button-group isDisabled="true">
+                            <button button type="info">Lt</button>
+                            <button button type="warning">Md</button>
+                            <button button type="danger">Rt</button>
+                        </button-group>
+                    </div>
+                </div>
+            </div>
+
+            <!--Button Addon-->
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <i class="fa fa-edit"></i>
+                    <h4 class="box-title">Button Addon</h4>
+                </div>
+                <div class="box-body">
+                    <p>Normal</p>
+                    <div class="input-group margin">
+                        <div class="input-group-btn">
+                            <span button type="danger">Action</span>
+                        </div>
+                        <input type="text" class="form-control">
+                    </div>
+                    <p>Flat</p>
+                    <div class="input-group margin">
+                        <input type="text" class="form-control">
+                        <div class="input-group-btn">
+                            <span button type="info" isFlat="true">Go!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Dropdown Buttons-->
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <i class="fa fa-edit"></i>
+                    <h4 class="box-title">Dropdown Buttons</h4>
+                </div>
+                <div class="box-body">
+                    <dropdown-menu type="info" id="sample-dropdown-menu" (toggled)="dropdownToggled('menu', $event.isOpen)" (closed)="dropdownClosed('menu')" (opened)="dropdownOpened('menu')">
+                        <span class="button-content">Action</span>
+                        <li class="dropdown-content"><a href="#">Action #1</a></li>
+                        <li class="dropdown-content"><a href="#">Action #2</a></li>
+                        <li class="dropdown-content divider"></li>
+                        <li class="dropdown-content"><a href="#">Action #3</a></li>
+                        <li class="dropdown-content"><a href="#">Action #4</a></li>
+                    </dropdown-menu>
+                    <dropdown-button type="success" id="sample-dropdown-button" (toggled)="dropdownToggled('button', $event.isOpen)" (closed)="dropdownClosed('button')" (opened)="dropdownOpened('button')">
+                        <span class="button-content">Action</span>
+                        <div class="box box-default dropdown-content">
+                            <div class="box-header with-border">
+                                <i class="fa fa-edit"></i>
+                                <h4 class="box-title">Colors:</h4>
+                            </div>
+                            <div class="box-body" style="min-width: 45em;">
+                                <button *ngFor="let color of bgColors" [color]="color" class="margin" isFlat="true">{{color}}</button>
+                            </div>
+                        </div>
+                    </dropdown-button>
+                    <div>
+                        <h5>Dropdown events: <button type="warning" size="tiny" (click)="dropdownClearEvents()"><i class="fa fa-close"></i></button></h5>
+                        <div style="max-height: 10em; overflow-y: auto">
+                            <ul>
+                                <li *ngFor="let ev of dropdownEvents">{{ev}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Split Buttons-->
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <i class="fa fa-edit"></i>
+                    <h4 class="box-title">Split Buttons</h4>
+                </div>
+                <div class="box-body">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <!--Application Buttons-->
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <i class="fa fa-edit"></i>
+                    <h4 class="box-title">Application Buttons</h4>
+                </div>
+                <div class="box-body">
+                    <p>Set <code>isApp="true"</code> to enable application button styles</p>
+                    <button isApp="true">
+                        <i class="fa fa-edit"></i>
+                        Edit
+                    </button>
+                    <button isApp="true">
+                        <i class="fa fa-play"></i>
+                        Play
+                    </button>
+                    <button isApp="true">
+                        <i class="fa fa-repeat"></i>
+                        Repeat
+                    </button>
+                    <button isApp="true">
+                        <i class="fa fa-pause"></i>
+                        Pause
+                    </button>
+                    <button isApp="true">
+                        <i class="fa fa-save"></i>
+                        Save
+                    </button>
+                    <button isApp="true">
+                        <span class="badge bg-yellow">3</span>
+                        <i class="fa fa-bullhorn"></i>
+                        Notifications
+                    </button>
+                    <button isApp="true">
+                        <span class="badge bg-green">3</span>
+                        <i class="fa fa-barcode"></i>
+                        Products
+                    </button>
+                    <button isApp="true">
+                        <span class="badge bg-purple">3</span>
+                        <i class="fa fa-users"></i>
+                        Users
+                    </button>
+                    <button isApp="true">
+                        <span class="badge bg-teal">3</span>
+                        <i class="fa fa-inbox"></i>
+                        Orders
+                    </button>
+                    <button isApp="true">
+                        <span class="badge bg-aqua">3</span>
+                        <i class="fa fa-envelope"></i>
+                        Inbox
+                    </button>
+                    <button isApp="true">
+                        <span class="badge bg-red">3</span>
+                        <i class="fa fa-heart-o"></i>
+                        Likes
+                    </button>
+                </div>
+            </div>
+
+            <!--Different colors-->
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <i class="fa fa-edit"></i>
+                    <h4 class="box-title">Different Colors</h4>
+                </div>
+                <div class="box-body">
+                    <p>
+                        Set <code>color="maroon"</code> or any other color on the following list, to override the button type.
+                    </p>
+                    <button *ngFor="let color of bgColors" [color]="color" class="margin" isFlat="true">{{color}}</button>
+                </div>
+            </div>
+
+            <!--Vertical Button Group-->
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <i class="fa fa-edit"></i>
+                    <h4 class="box-title">Vertical Button Group</h4>
+                </div>
+                <div class="box-body">
+                    <p>
+                        Vertical button groups are easy to create. Just add your buttons inside <code><![CDATA[<button-group isVertical="true"></button-group>]]></code>
+                    </p>
+                    <table class="table table-bordered text-center">
+                        <tbody>
+                            <tr>
+                                <th>Button</th>
+                                <th>Icons</th>
+                                <th>Flat</th>
+                            </tr>
+                            <tr *ngFor="let btnType of ['default', 'success', 'danger']">
+                                <td>
+                                    <button-group isVertical="true">
+                                        <button button [type]="btnType">Top</button>
+                                        <button button [type]="btnType">Middle</button>
+                                        <button button [type]="btnType">Bottom</button>
+                                    </button-group>
+                                </td>
+                                <td>
+                                    <button-group isVertical="true">
+                                        <button button [type]="btnType"><i class="fa fa-align-left"></i></button>
+                                        <button button [type]="btnType"><i class="fa fa-align-center"></i></button>
+                                        <button button [type]="btnType"><i class="fa fa-align-right"></i></button>
+                                    </button-group>
+                                </td>
+                                <td>
+                                    <button-group isVertical="true">
+                                        <button button [type]="btnType" isFlat="true"><i class="fa fa-align-left"></i></button>
+                                        <button button [type]="btnType" isFlat="true"><i class="fa fa-align-center"></i></button>
+                                        <button button [type]="btnType" isFlat="true"><i class="fa fa-align-right"></i></button>
+                                    </button-group>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>

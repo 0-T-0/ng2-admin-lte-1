@@ -32,7 +32,6 @@ export class AppComponent implements OnInit {
     // if (this.headerElement && !isNaN(this.headerElement.clientHeight)) {
     //   margins += this.headerElement.clientHeight;
     // }
-    console.log('margins', margins);
     return (this.windowHeight - margins) + 'px';
   };
 

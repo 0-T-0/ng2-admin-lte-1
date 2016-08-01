@@ -1,8 +1,29 @@
 {
   "name": "ng2-admin-lte",
-  "version": "0.0.0-alpha.0",
+  "version": "0.0.0-alpha.1",
   "license": "MIT",
   "private": false,
+  "description": "Angular 2 components for the Admin-LTE + bootstrap theme",
+  "keywords": [
+    "angular2",
+    "ng2",
+    "bootstrap",
+    "admin-lte",
+    "components"
+  ],
+  "homepage": "https://github.com/iskandersierra/ng2-admin-lte",
+  "bugs": {
+    "url": "https://github.com/iskandersierra/ng2-admin-lte/issues",
+    "email": "iskander.sierra@gmail.com"
+  },
+  "author": {
+    "name": "Iskander Sierra",
+    "email": "iskander.sierra@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iskandersierra/ng2-admin-lte.git"
+  },
   "angular-cli": {},
   "scripts": {
     "start": "ng serve",
